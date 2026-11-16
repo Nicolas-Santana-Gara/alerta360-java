@@ -275,7 +275,7 @@ elementos.append(ListFlowable(
 
 elementos.append(Paragraph("Links", styles["H2"]))
 elementos.append(Paragraph(
-    "<b>Repositório GitHub:</b> [INCLUIR LINK DO REPOSITORIO ANTES DO ENVIO]<br/>"
+    "<b>Repositório GitHub:</b> https://github.com/Nicolas-Santana-Gara/alerta360-java<br/>"
     "<b>Deploy (render.com):</b> [INCLUIR LINK DO DEPLOY ANTES DO ENVIO]",
     styles["CorpoTexto"]))
 
