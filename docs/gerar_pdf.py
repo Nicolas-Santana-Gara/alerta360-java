@@ -44,7 +44,14 @@ elementos.append(Paragraph("Disciplina: Domain Driven Design — Java", styles["
 elementos.append(Paragraph("Global Solution 2026.2 — FIAP", styles["SubtituloCapa"]))
 elementos.append(Spacer(1, 2 * cm))
 
-dados_integrantes = [["Integrante", "RM"], ["Nicolas Santana Gará", "RM561461"]]
+dados_integrantes = [
+    ["Integrante", "RM"],
+    ["Gustavo Garcia Silva", "RM562078"],
+    ["João Marcelo Diniz Vespa", "RM564038"],
+    ["João Vitor Reis Silva", "RM563115"],
+    ["Nicolas Santana Gará", "RM561461"],
+    ["Thiago Luza Alves", "RM562219"],
+]
 tabela_integrantes = Table(dados_integrantes, colWidths=[8 * cm, 4 * cm])
 tabela_integrantes.setStyle(TableStyle([
     ("BACKGROUND", (0, 0), (-1, 0), AZUL),
@@ -58,10 +65,6 @@ tabela_integrantes.setStyle(TableStyle([
     ("BOTTOMPADDING", (0, 0), (-1, -1), 6),
 ]))
 elementos.append(tabela_integrantes)
-elementos.append(Spacer(1, 0.3 * cm))
-elementos.append(Paragraph(
-    "<i>Observação: demais integrantes do grupo a serem incluídos nesta tabela antes do envio final.</i>",
-    ParagraphStyle(name="obs", parent=styles["SubtituloCapa"], fontSize=9)))
 elementos.append(Spacer(1, 3 * cm))
 elementos.append(Paragraph("Novembro de 2026", styles["SubtituloCapa"]))
 elementos.append(PageBreak())
@@ -290,7 +293,8 @@ doc = SimpleDocTemplate(
     pagesize=A4,
     leftMargin=2 * cm, rightMargin=2 * cm, topMargin=2 * cm, bottomMargin=2 * cm,
     title="Alerta360 - Documentacao DDD Java",
-    author="Nicolas Santana Gara - RM561461",
+    author="Gustavo Garcia Silva, Joao Marcelo Diniz Vespa, Joao Vitor Reis Silva, "
+           "Nicolas Santana Gara, Thiago Luza Alves",
 )
 doc.build(elementos)
 print("PDF gerado: Alerta360_DDD_Java_Documentacao.pdf")

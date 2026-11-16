@@ -13,7 +13,7 @@ Global Solution 2026.2 — FIAP — CitizenTech
 | Problema, em uma frase | Moradores de áreas sujeitas a alagamento não encontram, em um só lugar, informação local e atualizada sobre pontos críticos, ocorrências relatadas e orientações preventivas |
 | Como funciona | Plataforma comunitária: cidadão relata ocorrência num ponto crítico, equipe acompanha o status, painel mostra orientações preventivas |
 | O que esta parte faz | API RESTful (Spring Boot + Oracle) com as entidades do domínio: Usuário, Ponto Crítico, Ocorrência e Orientação |
-| Integrante(s) | Nicolas Santana Gará — RM561461 |
+| Integrantes | Gustavo Garcia Silva — RM562078; João Marcelo Diniz Vespa — RM564038; João Vitor Reis Silva — RM563115; Nicolas Santana Gará — RM561461; Thiago Luza Alves — RM562219 |
 
 ## Arquitetura (DDD simplificado)
 
