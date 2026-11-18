@@ -127,6 +127,19 @@ Passo a passo:
 5. Clique em **Create Web Service**. O Render builda a imagem e publica a aplicação; a variável `PORT` é injetada automaticamente pelo Render e já está mapeada em `application.properties`.
 6. Copie a URL pública gerada (ex.: `https://alerta360-api.onrender.com`) e inclua no PDF de documentação e no README.
 
+### Sobre o banco usado na demo pública do Render
+
+O acesso ao Oracle da FIAP é individual (RM + senha pessoal), então não é possível
+embutir essas credenciais num deploy público compartilhável. Por isso, a demo
+hospedada no Render roda com o perfil `render` (variável `SPRING_PROFILES_ACTIVE=render`
+configurada no serviço), que troca o banco por um **H2 em memória** só para esse
+ambiente — a API, os endpoints e as regras de negócio são exatamente os mesmos.
+
+A aplicação continua configurada com **Oracle como banco padrão** em
+`application.properties` (sem o perfil `render`), que é como ela deve ser avaliada
+localmente: `mvn spring-boot:run` com `DB_URL`/`DB_USER`/`DB_PASSWORD` do Oracle da
+FIAP continua funcionando normalmente, como descrito em "Como rodar localmente".
+
 **Importante:** commits feitos no GitHub após o prazo de entrega da GS (19/11, 23h55) não são considerados — zera a nota da parte técnica. Finalize o deploy com folga antes do prazo.
 
 ## Ferramentas e versões utilizadas

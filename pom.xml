@@ -54,13 +54,15 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Banco em memoria usado SOMENTE nos testes automatizados, para nao
-             depender do Oracle da FIAP ao rodar "mvn test". Em producao/deploy
-             a aplicacao usa o Oracle configurado em application.properties. -->
+        <!-- Banco em memoria: usado nos testes automatizados (perfil "test")
+             e no perfil opcional "render" (demo publica), para nao depender
+             do Oracle da FIAP em "mvn test" nem no deploy de demonstracao.
+             Em uso normal (local/producao) a aplicacao usa o Oracle
+             configurado em application.properties. -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <scope>test</scope>
+            <scope>runtime</scope>
         </dependency>
     </dependencies>
 
