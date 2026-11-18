@@ -276,7 +276,7 @@ elementos.append(ListFlowable(
 elementos.append(Paragraph("Links", styles["H2"]))
 elementos.append(Paragraph(
     "<b>Repositório GitHub:</b> https://github.com/Nicolas-Santana-Gara/alerta360-java<br/>"
-    "<b>Deploy (render.com):</b> [INCLUIR LINK DO DEPLOY ANTES DO ENVIO]",
+    "<b>Deploy (render.com):</b> https://alerta360-java.onrender.com",
     styles["CorpoTexto"]))
 
 elementos.append(Paragraph("Demais informações", styles["H2"]))
@@ -286,6 +286,15 @@ elementos.append(Paragraph(
     "completo do deploy está documentado no README.md do repositório. Na primeira "
     "execução, um DataSeeder popula automaticamente alguns pontos críticos e orientações "
     "de Jardim Helena, apenas para facilitar a demonstração e os testes manuais da API.",
+    styles["CorpoTexto"]))
+elementos.append(Paragraph(
+    "O acesso ao Oracle da FIAP é pessoal (RM e senha individuais de cada aluno), portanto "
+    "não é possível embuti-lo num deploy público compartilhável. Por isso, a demo hospedada "
+    "acima roda com um perfil opcional (\"render\", ativado pela variável "
+    "SPRING_PROFILES_ACTIVE=render) que troca o banco por um H2 em memória, mantendo a mesma "
+    "API e as mesmas regras de negócio. Sem esse perfil — como é o caso padrão em "
+    "application.properties — a aplicação usa o Oracle da FIAP normalmente, que é como ela "
+    "deve ser executada e avaliada localmente (ver \"Como executar o projeto\").",
     styles["CorpoTexto"]))
 
 doc = SimpleDocTemplate(
